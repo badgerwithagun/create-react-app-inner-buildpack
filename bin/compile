@@ -59,5 +59,7 @@ cp "$BP_DIR/.profile.d/inject_react_app_env.sh" "$profile_d_dir/"
 export_env_dir "$ENV_DIR" '^(REACT_APP_|NODE_|NPM_)'
 
 # Build the javascript bundle
+echo '       Installing dev dependencies'
 npm install --only=dev
+echo '       Running build'
 npm run build
